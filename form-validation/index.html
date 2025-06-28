@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+
+<body>
+    <form onsubmit="validateCheckbox()">
+        <label>Your Name</label><br>
+        <input id="user_name" type="text"><br><br>
+        <label>Your Cell Number</label><br>
+        <input id="user_cell" type="cell"><br><br>
+        <label>Your Email</label><br>
+        <input id="user_email" type="email"><br><br>
+        <label>Example Textarea</label><br>
+       <textarea  id="user_area"></textarea><br><br>
+       <input type="checkbox" id="agree">I agree to the terms <br><br>
+       <button type="submit">Submit</button>
+
+    </form>
+    <script>
+        function validateCheckbox(){
+            var a = document.getElementById('user_name').value.trim();
+            var b = document.getElementById('user_cell').value.trim();
+            var c = document.getElementById('user_email').value.trim();
+            var d = document.getElementById('user_area').value.trim();
+            var e = document.getElementById('agree');
+
+
+            if( a ==""||  b ==""|| c ==""|| d ==""|| !e.checked){
+                window.alert('invalid input');
+            }else{
+                 window.alert('success input');
+            }
+        }
+    </script>
+</body>
+
+</html>
